@@ -6,36 +6,43 @@
 
 script/source = "extends KinematicBody2D
 
-export var movementSpeed: float = 300
-var targetRotation: float
-var tween: Tween
-var f11down = false
+#<-----  Class Variables  ----->#
+export var movementSpeed: float = 300 #Speed the player moves
+var targetRotation: float             #Holds the target rotation generated based on the movement vector
+var tween: Tween                      #Holds the tween to tween the current rotation to the target rotation
+var f11down = false                   #Holds if I'm holding down f11 to go fullscreen so it dosn't flicker
+var movementVector = Vector2()        #Holds the direction the player is facing NOT the rotation
+
 func _ready():
-	tween = Tween.new()
-	add_child(tween)
-#warning-ignore:return_value_discarded
-	tween.start()
+	tween = Tween.new() #Creates a new tween node
+	add_child(tween) #Adds it as a child of the player
+#warning-ignore:return_value_discarded 
+#^-- This makes it so there isn't a warning in the debugger
+	tween.start() #Starts the tween, but it won't do anything untill it's been told what to do
 
 #warning-ignore:unused_argument
 func _physics_process(delta: float) -> void:
+	#<----
 	if(Input.is_key_pressed(KEY_F11) && !f11down):
 		OS.window_fullscreen = !OS.window_fullscreen
 		f11down = true
 	else:
 		f11down = false
-
-	var movementVector: Vector2 = Vector2()
-
+	#----> this handles the going fullscreen. This is temporary as there would be an option or a different place for it
+	
+	movementVector = Vector2() #clears the movement vector to 0,0 
+	#<----
 	movementVector.y -= Input.get_action_strength(\"move_up\")
 	movementVector.y += Input.get_action_strength(\"move_down\")
 	movementVector.x -= Input.get_action_strength(\"move_left\")
 	movementVector.x += Input.get_action_strength(\"move_right\")
-
+	#----> Gets the movement vector by input
 #	if(movementVector.x != 0 || movementVector.y != 0):
 #		$AnimationTree[\"parameters/conditions/running\"] = true
 #warning-ignore:return_value_discarded
 	move_and_slide(movementVector.normalized() * movementSpeed)
 
+	#this match statement tries to get the direction of rotation based on movement direction
 	match(Vector2(ceil(movementVector.x), ceil(movementVector.y))):
 		Vector2(0, -1):
 			if(rotation_degrees >= -180):
@@ -78,7 +85,7 @@ func _physics_process(delta: float) -> void:
 			else:
 				targetRotation = -135
 
-	rotation_degrees = fmod(rotation_degrees, 360)
+	rotation_degrees = fmod(rotation_degrees, 360) #mods the var so it's always between 0 and 360
 #warning-ignore:return_value_discarded
 	tween.interpolate_property(self, \"rotation_degrees\", null, targetRotation, .1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 #	print(rotation_degrees)
@@ -107,7 +114,9 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" groups=[
+"Player",
+]]
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
