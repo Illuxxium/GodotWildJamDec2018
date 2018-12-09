@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/daaaatruck2.png-58b4095c385d04fa2c4db8df51a6a2cc.stex"
+path="res://.import/character_ness_walk.png-3b89dbea53e9dc7ced77e387a56ab996.stex"
 
 [deps]
 
-source_file="res://Graphics/daaaatruck2.png"
-dest_files=[ "res://.import/daaaatruck2.png-58b4095c385d04fa2c4db8df51a6a2cc.stex" ]
+source_file="res://Graphics/character_ness_walk.png"
+dest_files=[ "res://.import/character_ness_walk.png-3b89dbea53e9dc7ced77e387a56ab996.stex" ]
 
 [params]
 

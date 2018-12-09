@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/daaaatruck2.png-58b4095c385d04fa2c4db8df51a6a2cc.stex"
+path="res://.import/firebase.png-8d7bcbbab16e5e5600d6b7adb1212724.stex"
 
 [deps]
 
-source_file="res://Graphics/daaaatruck2.png"
-dest_files=[ "res://.import/daaaatruck2.png-58b4095c385d04fa2c4db8df51a6a2cc.stex" ]
+source_file="res://Graphics/firebase.png"
+dest_files=[ "res://.import/firebase.png-8d7bcbbab16e5e5600d6b7adb1212724.stex" ]
 
 [params]
 

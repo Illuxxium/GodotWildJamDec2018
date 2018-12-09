@@ -4,22 +4,76 @@
 
 [node name="Terrain" type="Node2D" parent="."]
 
-[node name="TileMap" type="TileMap" parent="Terrain"]
-mode = 0
-tile_set = null
-cell_size = Vector2( 64, 64 )
-cell_quadrant_size = 16
-cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-cell_half_offset = 2
-cell_tile_origin = 0
-cell_y_sort = false
-cell_clip_uv = false
-collision_use_kinematic = false
-collision_friction = 1.0
-collision_bounce = 0.0
-collision_layer = 1
-collision_mask = 1
-occluder_light_mask = 1
-format = 1
-tile_data = PoolIntArray(  )
+[node name="Polygon2D" type="Polygon2D" parent="Terrain"]
+polygon = PoolVector2Array( 0, 0, 384, 0, 384, 576, 0, 576 )
+uv = PoolVector2Array(  )
+splits = PoolIntArray(  )
+color = Color( 0.121569, 0.560784, 0.709804, 1 )
+vertex_colors = PoolColorArray(  )
+offset = Vector2( 0, 0 )
+antialiased = false
+texture = null
+texture_offset = Vector2( 0, 0 )
+texture_scale = Vector2( 1, 1 )
+texture_rotation_degrees = 0.0
+skeleton = NodePath("")
+invert_enable = false
+invert_border = 100.0
+bones = [  ]
+
+[node name="Polygon2D2" type="Polygon2D" parent="Terrain"]
+position = Vector2( 768, 0 )
+polygon = PoolVector2Array( 0, 0, 384, 0, 384, 576, 0, 576 )
+uv = PoolVector2Array(  )
+splits = PoolIntArray(  )
+color = Color( 0.121569, 0.560784, 0.709804, 1 )
+vertex_colors = PoolColorArray(  )
+offset = Vector2( 0, 0 )
+antialiased = false
+texture = null
+texture_offset = Vector2( 0, 0 )
+texture_scale = Vector2( 1, 1 )
+texture_rotation_degrees = 0.0
+skeleton = NodePath("")
+invert_enable = false
+invert_border = 100.0
+bones = [  ]
+
+[node name="Polygon2D3" type="Polygon2D" parent="Terrain"]
+position = Vector2( 384, 0 )
+polygon = PoolVector2Array( 0, 0, 384, 0, 384, 576, 0, 576 )
+uv = PoolVector2Array(  )
+splits = PoolIntArray(  )
+color = Color( 0.423529, 0.423529, 0.423529, 1 )
+vertex_colors = PoolColorArray(  )
+offset = Vector2( 0, 0 )
+antialiased = false
+texture = null
+texture_offset = Vector2( 0, 0 )
+texture_scale = Vector2( 1, 1 )
+texture_rotation_degrees = 0.0
+skeleton = NodePath("")
+invert_enable = false
+invert_border = 100.0
+bones = [  ]
+
+[node name="Particles2D" type="Particles2D" parent="Terrain"]
+emitting = true
+amount = 8
+lifetime = 1.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = null
+texture = null
+normal_map = null
+h_frames = 1
+v_frames = 1
 
