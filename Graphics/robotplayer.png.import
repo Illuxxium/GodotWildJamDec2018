@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/vehicle1.png-c357bb7cba59dca3ea15394e100ddf1f.stex"
+path="res://.import/robotplayer.png-9d99f511ac6e9d8d3e489e9b132605e4.stex"
 
 [deps]
 
-source_file="res://Graphics/vehicle1.png"
-dest_files=[ "res://.import/vehicle1.png-c357bb7cba59dca3ea15394e100ddf1f.stex" ]
+source_file="res://Graphics/robotplayer.png"
+dest_files=[ "res://.import/robotplayer.png-9d99f511ac6e9d8d3e489e9b132605e4.stex" ]
 
 [params]
 
