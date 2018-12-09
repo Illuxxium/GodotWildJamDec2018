@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://Graphics/Ness Sprites/ness_down1.tres" type="Texture" id=1]
 [ext_resource path="res://Graphics/Ness Sprites/ness_right_1.tres" type="Texture" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://Graphics/Ness Sprites/ness_up_2.tres" type="Texture" id=14]
 [ext_resource path="res://Graphics/Ness Sprites/ness_up_3.tres" type="Texture" id=15]
 [ext_resource path="res://Graphics/Ness Sprites/ness_up_4.tres" type="Texture" id=16]
+[ext_resource path="res://Graphics/testdisc.png" type="Texture" id=17]
 
 [sub_resource type="GDScript" id=1]
 
@@ -60,37 +61,37 @@ func _physics_process(delta: float) -> void:
 	print(movementVector, \"    \", $AnimatedSprite.animation)
 	match(movementVector):
 		Vector2(0, 0):
-			if($AnimatedSprite.animation == \"default\"):
+			if($AnimatedSprite.animation != \"default\"):
 				$AnimatedSprite.play(\"default\") 
 		Vector2(1, 0):
-			if($AnimatedSprite.animation == \"move_right\"):
+			if($AnimatedSprite.animation != \"move_right\"):
 				$AnimatedSprite.play(\"move_right\")
 		Vector2(1, 1):
-			if($AnimatedSprite.animation == \"move_down_right\"):
+			if($AnimatedSprite.animation != \"move_down_right\"):
 				$AnimatedSprite.play(\"move_down_right\")
 		Vector2(0, 1):
-			if($AnimatedSprite.animation == \"move_down\"):
+			if($AnimatedSprite.animation != \"move_down\"):
 				$AnimatedSprite.play(\"move_down\")
 		Vector2(-1, 1):
-			if($AnimatedSprite.animation == \"move_down_left\"):
+			if($AnimatedSprite.animation != \"move_down_left\"):
 				$AnimatedSprite.play(\"move_down_left\")
 		Vector2(-1, 0):
-			if($AnimatedSprite.animation == \"move_left\"):
+			if($AnimatedSprite.animation != \"move_left\"):
 				$AnimatedSprite.play(\"move_left\")
 		Vector2(-1, -1):
-			if($AnimatedSprite.animation == \"move_up_left\"):
+			if($AnimatedSprite.animation != \"move_up_left\"):
 				$AnimatedSprite.play(\"move_up_left\")
 		Vector2(0, -1):
-			if($AnimatedSprite.animation == \"move_up\"):
+			if($AnimatedSprite.animation != \"move_up\"):
 				$AnimatedSprite.play(\"move_up\")
 		Vector2(1, -1):
-			if($AnimatedSprite.animation == \"move_up_right\"):
+			if($AnimatedSprite.animation != \"move_up_right\"):
 				$AnimatedSprite.play(\"move_up_right\")
 		_:
-			if($AnimatedSprite.animation == \"default\"):
+			if($AnimatedSprite.animation != \"default\"):
 				$AnimatedSprite.play(\"default\")
 	if($AnimatedSprite.animation != \"default\"):
-		breakpoint
+		print(\"SOFSDJHOFHSDOPHGUWOUBFDHSDFUHDNFSP:IOUHBNFSIOUHNSFCUHNSIFIOUHBNFISSDFIUSDOFUISOIF\")
 #	#this match statement tries to get the direction of rotation based on movement direction
 #	match(Vector2(ceil(movementVector.x), ceil(movementVector.y))):
 #		Vector2(0, -1):
@@ -461,6 +462,8 @@ shape = SubResource( 3 )
 disabled = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -31.8405, 17.6438 )
+scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 4 )
 animation = "default"
 playing = true
@@ -487,4 +490,8 @@ process_mode = 1
 root_motion_track = NodePath("")
 parameters/playback = SubResource( 27 )
 parameters/StateMachine/playback = SubResource( 28 )
+
+[node name="testdisc" type="Sprite" parent="."]
+position = Vector2( -12.8463, 43.5104 )
+texture = ExtResource( 17 )
 
