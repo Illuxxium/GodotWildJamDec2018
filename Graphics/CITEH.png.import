@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/vehicle1.png-c357bb7cba59dca3ea15394e100ddf1f.stex"
+path="res://.import/CITEH.png-395e7f58d40a01ae6546d6601d0b4bbc.stex"
 
 [deps]
 
-source_file="res://Graphics/vehicle1.png"
-dest_files=[ "res://.import/vehicle1.png-c357bb7cba59dca3ea15394e100ddf1f.stex" ]
+source_file="res://Graphics/CITEH.png"
+dest_files=[ "res://.import/CITEH.png-395e7f58d40a01ae6546d6601d0b4bbc.stex" ]
 
 [params]
 
