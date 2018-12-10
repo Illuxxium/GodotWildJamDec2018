@@ -1,6 +1,5 @@
 [gd_scene load_steps=45 format=2]
 
-<<<<<<< Updated upstream
 [ext_resource path="res://Graphics/robotplayer.png" type="Texture" id=1]
 [ext_resource path="res://Graphics/Ness Sprites/ness_up_1.tres" type="Texture" id=2]
 [ext_resource path="res://Graphics/Ness Sprites/ness_up_2.tres" type="Texture" id=3]
@@ -18,7 +17,6 @@
 [ext_resource path="res://Graphics/Ness Sprites/ness_down2.tres" type="Texture" id=15]
 [ext_resource path="res://Graphics/Ness Sprites/ness_down3.tres" type="Texture" id=16]
 [ext_resource path="res://Graphics/Ness Sprites/ness_down4.tres" type="Texture" id=17]
-=======
 [ext_resource path="res://Graphics/Ness Sprites/ness_down1.tres" type="Texture" id=1]
 [ext_resource path="res://Graphics/Ness Sprites/ness_right_1.tres" type="Texture" id=2]
 [ext_resource path="res://Graphics/Ness Sprites/ness_right_2.tres" type="Texture" id=3]
@@ -35,7 +33,6 @@
 [ext_resource path="res://Graphics/Ness Sprites/ness_left_2.tres" type="Texture" id=14]
 [ext_resource path="res://Graphics/Ness Sprites/ness_left_3.tres" type="Texture" id=15]
 [ext_resource path="res://Graphics/Ness Sprites/ness_left_4.tres" type="Texture" id=16]
->>>>>>> Stashed changes
 
 [sub_resource type="GDScript" id=1]
 
@@ -526,7 +523,6 @@ root_motion_track = NodePath("")
 parameters/playback = SubResource( 27 )
 parameters/StateMachine/playback = SubResource( 28 )
 
-<<<<<<< Updated upstream
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 1
 rotating = false
@@ -567,5 +563,3 @@ shape = SubResource( 29 )
 _sections_unfolded = [ "Transform", "shape" ]
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
-=======
->>>>>>> Stashed changes
